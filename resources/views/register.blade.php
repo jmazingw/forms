@@ -64,9 +64,12 @@
                 <input type="text" class="form-control" id="city" placeholder="Your City" required>
             </div>
             <div class="col-md-6">
-                <label for="region" class="form-label">Region</label>
-                <select id="region" class="form-select" required>
-                    <option selected>Choose your Region</option>
+                <label for="province" class="form-label">Province</label>
+                <select id="province" class="form-select" required>
+                    <option selected> </option>
+                    @foreach ($provinces as $province)
+                        <option value="{{ $province['name'] }}">{{ $province['name'] }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="col-12">
