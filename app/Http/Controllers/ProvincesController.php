@@ -11,7 +11,7 @@ class ProvincesController extends Controller
     {
      $response = Http::withOptions([
         'verify' => false, // Disables SSL Verification (Not recommended for production)
-        ])->get('https://psgc.gitlab.io/api/provinces.json'); // Use the JSON endpoint
+        ])->get('https://psgc.gitlab.io/api/provinces/'); // Use the JSON endpoint
 
         if ($response->successful()) {
             $provinces = $response->json(); // Fetch and decode the JSON
