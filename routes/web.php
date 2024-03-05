@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\ProvincesController;
+use App\Http\Controllers\RegionsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,10 @@ Route::get('/choose', function () {
 
 Route::get('/survey', function () {
     return view('survey');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
 });
 
 Route::get('/register', [ProvincesController::class, 'index']);
